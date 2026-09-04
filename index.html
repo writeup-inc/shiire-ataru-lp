@@ -171,6 +171,33 @@ header.is-hidden{transform:translateY(calc(-100% - 2px))!important}
 .report-dashboard::after{display:block;padding:0 24px 16px;color:var(--soft);background:#fff;font-size:7px;content:"※数値・物件情報・社名は画面イメージです。"}
 @media(max-width:620px){.report-body{padding:18px}.report-summary h3{font-size:20px}.report-kpis{grid-template-columns:repeat(3,1fr)}.report-kpis div{border-bottom:1px solid var(--line)}.report-kpis div:nth-child(3){border-right:0}.report-kpis div:nth-child(4),.report-kpis div:nth-child(5){border-bottom:0}.report-kpis div:nth-child(5){border-right:0}.property-main,.property-action{align-items:flex-start;flex-direction:column}.property-main .pill{align-self:flex-start}.report-next{grid-template-columns:32px 1fr}.report-next-icon{width:32px;height:32px}.report-history-list>div{grid-template-columns:62px 1fr auto}}
 </style>
+<style>
+/* Report artifact — a delivered paper document, not another app screen */
+.report-shell{perspective:1600px}
+.report-dashboard{position:relative;isolation:isolate;overflow:visible;border:1px solid #c9ccc9;border-radius:0;background:#fff;box-shadow:0 34px 70px rgba(18,30,21,.16),0 8px 18px rgba(18,30,21,.08);transform:rotateY(-1.6deg) rotateX(.7deg);transform-origin:center left}
+.report-dashboard::before,.report-dashboard::after{position:absolute;z-index:-2;inset:0;border:1px solid #d5d7d4;background:#f4f4f0;content:""}
+.report-dashboard::before{transform:translate(8px,8px) rotate(.35deg);box-shadow:0 10px 20px rgba(17,29,20,.06)}
+.report-dashboard::after{z-index:-3;background:#e9eae6;transform:translate(15px,15px) rotate(.7deg)}
+.report-dashboard .report-bar{position:relative;padding:22px 24px 15px;border-bottom:3px solid var(--ink);color:var(--ink);background:#fff}
+.report-dashboard .report-bar::before{position:absolute;top:-9px;left:34px;width:45px;height:17px;border:1px solid #9ca29e;border-radius:2px;background:linear-gradient(180deg,#ecefed,#aeb4b0 52%,#f6f7f6 54%,#a6aca8);box-shadow:0 3px 5px rgba(0,0,0,.14);content:"";transform:rotate(-2deg)}
+.report-dashboard .report-bar::after{position:absolute;top:0;right:0;width:0;height:0;border-top:24px solid #e7e9e6;border-left:24px solid transparent;filter:drop-shadow(-2px 2px 1px rgba(0,0,0,.08));content:""}
+.report-dashboard .report-bar strong{font-size:16px;letter-spacing:.04em}
+.report-dashboard .report-bar span{color:#667069}
+.report-body{position:relative;background-color:#fff;background-image:linear-gradient(rgba(35,48,39,.018) 1px,transparent 1px);background-size:100% 26px}
+.report-body::after{display:block;margin-top:12px;color:var(--soft);font-size:7px;content:"※数値・物件情報・社名は画面イメージです。"}
+.report-dashboard>.report-body{padding:27px 28px 23px}
+.report-dashboard::selection{background:var(--green-soft)}
+.report-dashboard .report-kpis,.report-dashboard .property-card,.report-dashboard .report-next,.report-dashboard .report-history summary,.report-dashboard .report-history-list{border-radius:0}
+.report-dashboard .report-kpis{border-top:2px solid var(--ink);background:rgba(247,248,246,.82)}
+.report-dashboard .property-card{border-left:0;border-right:0}
+.report-dashboard .property-rank{background:#202521}
+.report-dashboard .report-next{border-left:4px solid var(--green);background:rgba(230,249,236,.78)}
+.report-dashboard .report-history summary{min-height:46px;padding-inline:17px}
+.report-dashboard .report-history summary span{border-radius:2px}
+.report-dashboard::after{display:block;padding:0;background:#e9eae6;font-size:0}
+@media(max-width:900px){.report-dashboard{transform:none}.report-dashboard::before{transform:translate(5px,6px)}.report-dashboard::after{transform:translate(10px,12px)}}
+@media(max-width:620px){.report-dashboard>.report-body{padding:21px 18px 19px}.report-dashboard .report-bar{padding:20px 18px 13px}.report-dashboard .report-bar::before{left:22px}.report-dashboard::before{transform:translate(3px,5px)}.report-dashboard::after{transform:translate(6px,9px)}}
+</style>
 </head>
 <body>
 <svg class="icon-sprite" aria-hidden="true"><symbol id="icon-line" viewBox="0 0 24 24"><path d="M20 11.2c0 4.3-3.8 7.8-8.5 7.8-1 0-2-.2-2.9-.5L4 21l1.3-3.9A7.4 7.4 0 0 1 3 11.7C3 7.4 6.8 4 11.5 4S20 7 20 11.2Z"/><path d="M7.5 11.5h.1m3.8 0h.1m3.8 0h.1"/></symbol><symbol id="icon-mail" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m4 7 8 6 8-6"/></symbol><symbol id="icon-phone" viewBox="0 0 24 24"><path d="M8.1 3.8 10 7.9 7.8 9.7c1.1 2.7 3.2 4.8 5.9 5.9l1.8-2.2 4.1 1.9-.4 3c-.1.9-.9 1.6-1.8 1.6C10 19.5 4.5 14 4.1 6.6c0-.9.6-1.7 1.6-1.8l2.4-1Z"/><path d="M15.7 3.4v3.2m-1.6-1.6h3.2"/></symbol></svg>
